@@ -33,7 +33,9 @@ Once its published on the webstore, then user will get this installed in a click
 ## 
 <p align="center">
 Both, the plugin & extension, will show warning to the users that you are missing another part of the project, in case, both of the components are not installed.
-  
+</p>
+
+<br>
+
 <img src="readme_img/plugin_error.jpg">
 <img src="readme_img/extension_error.jpg">
-</p>
