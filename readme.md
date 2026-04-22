@@ -94,7 +94,7 @@ Path.Combine(Environment.GetEnvironmentVariable("windir") ?? "C:\\Windows", "Tem
 Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Temp")</code>
 <br><br>With our plugin action, one can just tap a keypad button, and the rest will be taken care of. This way of deletion removes the need of emptying the recycling bin again, as the temp & recent files are completely removed from your system. Btw, we do not include the feature of "emptying the recycle bin" in the same method, because sometimes, there are certain things which user may want to recover, after mistakenly deleting them. 
 </p>
-<img src="https://hackathonmaverick.in/lole-images/deep-clean.jpg">
+<img src="readme_img/deep-clean.jpg">
 
 <br><br>
 
@@ -102,15 +102,15 @@ Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicatio
 <p align="justify">We hate to see the scattered, messy desktop screens of many users, making no-sense. Folders, files, other icons are all-over-the-desktop, making it looking very clumsy. With our plugin, we are providing you a one-tap-action which turns your computer from a messy one into a <b>Desktop Island.</b>
 
 We had a lot of other orientations in our mind, but as it was our first-time using the Windows API by the help of C#, we could finalize only this orientation/segregation</p>
-<img src="https://hackathonmaverick.in/lole-images/desktop-island.jpg">
+<img src="readme_img/desktop-island.jpg">
 
 <br><br>
 
 <h3>5) Gmail Profiles</h3>
 <p align="justify">If you are a Windows user, and have Chrome installed on your machine, you might be aware of the fact that if we have multiple emails logged in a single Chrome profile, then accessing those emails is very cumbersome. We have to open the gmail inbox of an email by navigating to mail.google.com/mail/u/0 and from there on, we have to use the dropdown filter, to navigate to other emails. Even to access things like Google account, drive or any other section for the particular gmail account, we have to first dig that hole, which is quite repetitive and boring. </p>
-<img src="https://hackathonmaverick.in/lole-images/gmail-profiles.png">
+<img src="raedme_img/gmail-profiles.png">
 
 <br>
 
 ## Final breakdown of the plugin
-<img src="https://hackathonmaverick.in/lole-images/config-ui.jpg">
+<img src="readme_img/config-ui.jpg">
