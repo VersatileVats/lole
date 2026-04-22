@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoLé | Notes</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css"
+      rel="stylesheet" />
+
+    <style>
+      #editor-wrapper {
+        position: absolute !important;
+        top: 10px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        z-index: 9999;
+        background: white;
+        width: 50% !important;
+      }
+
+      /* Reduce spacing between paragraphs in the viewing area */
+      #detailsDiv p,
+      .ql-editor p {
+        margin-top: 4px !important;
+        margin-bottom: 4px !important;
+        line-height: 1.4 !important; /* Slightly tighter line spacing */
+      }
+
+      /* Optional: Add a bit more space only for headers so they stand out */
+      #detailsDiv h1,
+      #detailsDiv h2,
+      #detailsDiv h3 {
+        margin-top: 15px !important;
+        margin-bottom: 8px !important;
+      }
+
+      /* Not too much padding either */
+      #detailsDiv ul,
+      #detailsDiv ol {
+        margin-top: 5px !important;
+        padding-left: 25px !important;
+      }
+
+      #resizer::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 1px;
+        width: 4px;
+        height: 30px;
+        background: #ccc;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="editor-wrapper"
+      style="display: none; width: 50vw !important; margin: 20px auto">
+      <div id="quill-editor" style="height: 400px; background: white"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
+    <script>
+      // Initialize Quill
+      const quill = new Quill("#quill-editor", {
+        theme: "snow",
+        modules: {
+          toolbar: [
+            [{ header: [2, false] }],
+            ["bold", "italic", "underline", "strike"],
+            ["link", "blockquote", "code-block"],
+            [{ list: "ordered" }, { list: "bullet" }],
+            ["clean"],
+          ],
+        },
+      });
+
+      // Listen for the Extension to trigger Edit Mode
+      window.addEventListener("TRIGGER_EDIT_MODE", (e) => {
+        const unzipIcon = document.getElementById("unzipIcon");
+        const detailsDiv = document.getElementById("detailsDiv");
+        const wrapper = document.getElementById("editor-wrapper");
+        const navWrapper = document.querySelector("#pointsDiv").parentElement;
+
+        // Load Data
+        quill.root.innerHTML = e.detail.html;
+
+        // Hide UI elements
+        if (navWrapper) navWrapper.style.display = "none";
+        if (unzipIcon) unzipIcon.style.display = "none";
+
+        // Move the editor inside detailsDiv
+        detailsDiv.innerHTML = "";
+        detailsDiv.appendChild(wrapper);
+        wrapper.style.display = "block";
+      });
+
+      window.addEventListener("SHOW_NOTIFICATION", (e) => {
+        const { notificationType, message } = e.detail;
+        let bgColor = "rgba(0, 255, 0, 0.6)";
+
+        if (notificationType === "error") {
+          bgColor = "rgba(255, 0, 0, 0.6)";
+        }
+
+        showNotification(message, bgColor, 2000);
+      });
+
+      window.addEventListener("CLOSE_EDITOR", () => {
+        const wrapper = document.getElementById("editor-wrapper");
+        const detailsDiv = document.getElementById("detailsDiv");
+
+        wrapper.style.display = "none";
+        // Move the wrapper back to body so it doesn't get lost when detailsDiv is cleared
+        document.body.appendChild(wrapper);
+      });
+
+      // Function to get the data back (called by your Save Icon in the content script)
+      window.addEventListener("REQUEST_SAVE_DATA", () => {
+        const updatedHtml = quill.root.innerHTML;
+        // Dispatch back to Content Script
+        window.dispatchEvent(
+          new CustomEvent("SAVE_DATA_RESPONSE", {
+            detail: { html: updatedHtml },
+          }),
+        );
+      });
+    </script>
+  </body>
+</html>

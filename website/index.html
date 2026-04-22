@@ -1,0 +1,1753 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoLé | Logitech</title>
+
+    <!-- stylesheets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&amp;display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+
+    <!-- animation script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
+    <!-- utilities -->
+    <link rel="shortcut icon" href="resources/logo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body view="own" style="position: relative">
+    <div class="overlay"></div>
+
+    <img id="proceedToMain" width="50" src="resources/play.png" />
+
+    <p id="teamDetails">
+      Made by <b>Team Juggernauts</b> for winning the DevStudio Logitech
+      Hackathon<br />
+    </p>
+
+    <!-- landing section -->
+    <div id="landing-section">
+      <div id="full-form">
+        <p>Tells the full-form of this alphabet</p>
+      </div>
+      <div id="letters">
+        <img id="leter_s" src="resources/letter-l.png" alt="" />
+        <img id="letter_m" src="resources/letter-o.png" alt="" />
+        <img id="letter_a" src="resources/letter-l.png" alt="" />
+        <img id="letter_r" src="resources/letter-e.png" alt="" />
+        <p style="text-align: center; margin-top: 2rem">
+          Being <b>smart</b> & <b>efficient</b> is an art, and can be
+          conquered<br />by those who use <b>LoLé</b>
+        </p>
+      </div>
+      <div id="reasoning">
+        <p>
+          This is the text that will tell what is the reasoning for telling this
+        </p>
+      </div>
+    </div>
+
+    <!-- main text division -->
+    <div id="main-text">
+      <h2>
+        👋
+        <span
+          style="
+            padding: 2px;
+            border-radius: 2px;
+            background: #0d6efd;
+            color: white;
+          "
+          >LO</span
+        ><span style="color: #0d6efd; padding: 2px; border-radius: 2px"
+          >LÉ</span
+        >
+      </h2>
+
+      <!--refresh icon which can enable auto refresh thing-->
+      <div
+        class="nav-icon-container"
+        style="position: absolute; left: 10%; top: 0%"
+        data-tooltip="Enables auto-refresh every 10s">
+        <img
+          width="40"
+          height="40"
+          id="refreshIcon"
+          src="resources/refresh.png"
+          style="cursor: pointer; filter: grayscale(100%)"
+          alt="refresh" />
+        <p style="margin-top: 0.5rem; text-align: center">Refresh</p>
+      </div>
+
+      <!--gallery icon-->
+      <div
+        class="nav-icon-container"
+        style="position: absolute; left: 15%; top: 0%"
+        data-tooltip="View your bookmarked images and AI captions">
+        <img
+          width="40"
+          height="40"
+          id="galleryIcon"
+          style="cursor: pointer; filter: grayscale(0)"
+          src="https://img.icons8.com/stickers/40/gallery.png"
+          alt="gallery" />
+        <p style="margin-top: 0.5rem; text-align: center">Gallery</p>
+      </div>
+
+      <!--about icon-->
+      <div
+        class="nav-icon-container"
+        style="position: absolute; left: 20%; top: 0%"
+        data-tooltip="View information/FAQs about the project">
+        <img
+          width="40"
+          height="40"
+          id="aboutIcon"
+          style="cursor: pointer; filter: grayscale(0)"
+          src="https://img.icons8.com/flat-round/40/question-mark.png"
+          alt="about" />
+        <p style="margin-top: 0.5rem; text-align: center">About</p>
+      </div>
+
+      <!--skip button so that the landing page would not be shown-->
+      <div
+        class="nav-icon-container"
+        style="position: absolute; right: 15%; top: 0%"
+        data-tooltip="Bypasses the landing page on startup">
+        <img
+          width="40"
+          height="40"
+          id="skipLandingPage"
+          style="cursor: pointer; filter: grayscale(100%)"
+          src="resources/skip.png"
+          alt="skip" />
+        <p style="margin-top: 0.5rem; text-align: center">Skip</p>
+      </div>
+
+      <!-- focus icon -->
+      <div
+        class="nav-icon-container"
+        style="position: absolute; right: 10%; top: 0%"
+        data-tooltip="Groups Logitech tabs to remove clutter">
+        <img
+          width="40"
+          height="40"
+          id="focusMode"
+          style="cursor: pointer"
+          src="resources/focus.png"
+          alt="skip" />
+        <p style="margin-top: 0.5rem; text-align: center">Focus</p>
+      </div>
+
+      <p style="width: 80%; margin: auto; text-align: center">
+        Your perfect Pal for Logitech (<a
+          href="https://github.com/VersatileVats/lole"
+          target="_blank"
+          >Install the extension</a
+        >, to use the project)
+      </p>
+
+      <div id="shareViewBookmark" class="share-bookmark" style="display: none">
+        <span class="share-text">Shared View</span>
+      </div>
+
+      <div id="fileViewerOverlay" class="viewer-overlay">
+        <div class="viewer-header">
+          <span class="file-name" id="viewerFileName">File Vault - Viewer</span>
+          <button class="viewer-close" onclick="closeViewer()">&times;</button>
+        </div>
+        <div class="viewer-body">
+          <iframe id="fileFrame" src=""></iframe>
+        </div>
+      </div>
+
+      <!-- Non-image gallery section -->
+      <div id="nonImageGallery" style="margin-top: 20px">
+        <div id="share" class="bg-warning text-white"></div>
+
+        <!-- Entire Page Bookmark section -->
+        <div
+          id="entirePageBookmarksDiv"
+          class="row m-5"
+          style="justify-content: space-around">
+          <div class="col-md-5" id="entirePageBookmarkText">
+            <p
+              style="padding: 2rem; text-align: justify"
+              class="d-flex flex-column justify-content-center align-items-center">
+              <span
+                style="
+                  font-weight: bold;
+                  text-decoration: underline;
+                  text-align: center;
+                "
+                >Picking up a handful of quality information is way better than
+                the clutter</span
+              >
+              That is why we have gave you the freedom to bookmark the entire
+              page. If you think that one of the docs page or any other page is
+              useful, go on and just save the entire page on this extension so
+              that you can come here anytime & see the stuff in a glance
+              <br />
+              <br />
+              How to do it? Right-click on the page & click Bookmark entire
+              page, and the page will be saved
+            </p>
+          </div>
+          <div
+            class="col-md-5 div-3d"
+            style="border-radius: 10px; border: 4px"
+            id="entirePageBookmarks">
+            <div class="d-flex flex-column" style="align-items: center">
+              <p style="font-weight: bold">
+                Bookmarked doc pages (<span id="entirePageBookmarksCount"
+                  >9</span
+                >) 👇
+              </p>
+              <div
+                id="entirePageBookmarksList"
+                style="
+                  height: 200px;
+                  width: 80%;
+                  overflow: scroll;
+                  overflow-x: hidden;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: center;
+                  margin-bottom: 2rem;
+                "></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specific-text Bookmark section -->
+        <div
+          id="textBookmarksDiv"
+          class="row m-5"
+          style="justify-content: space-around; align-items: center">
+          <div
+            id="textBookmarks"
+            class="col-md-5 div-3d"
+            style="border-radius: 10px; border: 4px">
+            <div class="d-flex flex-column" style="align-items: center">
+              <p style="font-weight: bold">
+                Bookmarked text-specific doc pages (<span
+                  id="textBookmarksCount"
+                  >9</span
+                >) 👇
+              </p>
+              <div
+                id="textBookmarksList"
+                style="
+                  height: 200px;
+                  width: 80%;
+                  overflow: scroll;
+                  overflow-x: hidden;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: center;
+                  margin-bottom: 2rem;
+                "></div>
+            </div>
+          </div>
+          <div class="col-md-5" id="textBookmarkText">
+            <p
+              style="padding: 2rem; text-align: justify"
+              class="d-flex flex-column justify-content-center align-items-center">
+              <span style="position: relative; display: inline-block">
+                <span
+                  id="colorPreview"
+                  style="
+                    font-weight: bold;
+                    text-decoration: underline;
+                    background: rgba(34, 139, 34, 0.5);
+                    border-radius: 4px;
+                    padding: 0 4px;
+                  "
+                  >Not everything on a page is relevant</span
+                >
+
+                <input
+                  type="color"
+                  id="actualColorPicker"
+                  style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    cursor: pointer;
+                    border: none;
+                  " />
+
+                <button
+                  id="resetColor"
+                  title="Reset to default"
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 4px;
+                    width: 24px; /* Explicit width */
+                    height: 24px; /* Explicit height */
+                    vertical-align: middle;
+                    color: inherit; /* Inherits text color from the <p> tag */
+                    opacity: 0.7;
+                  ">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="20"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="display: block">
+                    <path
+                      d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                    <path d="M3 3v5h5" />
+                  </svg>
+                </button>
+              </span>
+              <br />
+              Keeping this thought in mind, we provided the feature to bookmark
+              a particular text section of the page, so that you can reach to
+              the exact snippet of information, that was most helpful to you.
+              <br />
+              <br />
+              How to do it? Just select the text, right-click, and then click on
+              the Extension name, so that the page along with the specified text
+              could be saved
+              <br />
+              <br />
+              Choose your favorite highlight color for text-specific bookmarks
+              from the color picker, and click on the reset button to reset it
+              to default green color
+            </p>
+          </div>
+        </div>
+
+        <!-- File Vault section -->
+        <div class="headingDiv">
+          <h3>
+            <span class="border-animation">File Vault</span>
+          </h3>
+        </div>
+        <div id="file-vault" style="position: relative; margin-bottom: 2rem">
+          <div style="margin-top: 1rem">
+            <p>
+              <span style="font-weight: bold"
+                >File Vault is here to help you share some important docs with
+                others.</span
+              >
+              If you are viewing this vault, that means you have successfully
+              verified your account & can now start uploading some files to this
+              project so that you can view them at anytime and can also let you
+              loved ones see that (in case you are sharing the same) Let's see
+              some of the important stuff related to the vault:
+            </p>
+            <p>
+              In the centre, there is your <b>notes files</b>, which gives you
+              the freedom to take note-making to new heights! Click the text
+              file and see what happens
+            </p>
+            <ol>
+              <li>Each file cannot be more than 200 kB</li>
+              <li>Can accomodate a total of 2 files (a doc, pdf)</li>
+              <li>
+                Reset icon at the top will delete all of the uploaded files
+              </li>
+            </ol>
+          </div>
+
+          <!-- file uploads -->
+          <div
+            style="
+              border: 3px dashed black;
+              border-radius: 6px;
+              position: relative;
+              margin: auto;
+              width: 50%;
+            ">
+            <img
+              id="deleteFiles"
+              style="
+                position: absolute;
+                left: 2%;
+                top: 5%;
+                cursor: pointer;
+                width: 4vw;
+                min-width: 20px;
+                max-width: 40px;
+                height: auto;
+              "
+              src="resources/reset.png"
+              alt="reset-files" />
+            <div
+              id="uploadedFiles"
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                gap: 10px;
+                margin-bottom: 20px;
+              ">
+              <img
+                id="docFile"
+                onclick="seeFile(this)"
+                style="
+                  width: 25%;
+                  max-width: 100px;
+                  height: auto;
+                  filter: grayscale(100%);
+                  cursor: pointer;
+                "
+                src="resources/doc.png"
+                alt="doc" />
+              <img
+                id="txtFile"
+                style="
+                  width: 25%;
+                  max-width: 100px;
+                  height: auto;
+                  cursor: pointer;
+                "
+                src="resources/txt.png"
+                alt="txt" />
+              <img
+                id="pdfFile"
+                onclick="seeFile(this)"
+                style="
+                  width: 25%;
+                  max-width: 100px;
+                  height: auto;
+                  filter: grayscale(100%);
+                  cursor: pointer;
+                "
+                src="resources/pdf.png"
+                alt="pdf" />
+            </div>
+            <div id="initiateUploading">
+              <img
+                style="text-align: center"
+                width="70"
+                height="70"
+                src="resources/d-and-d.png"
+                alt="drag-and-drop" />
+              <p>Click here to upload files</p>
+            </div>
+            <p id="fileErrorDiv"></p>
+            <input
+              type="file"
+              accept=".pdf,.doc,.docx"
+              style="display: none"
+              id="file-drop" />
+          </div>
+        </div>
+
+        <!-- Image gallery -->
+        <div class="headingDiv">
+          <h3>
+            <span class="border-animation">Image Gallery</span>
+          </h3>
+        </div>
+        <div
+          id="imageDiv"
+          style="
+            width: 80%;
+            text-align: center;
+            margin: auto;
+            text-align: justify;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+          ">
+          <p><b>A picture speaks a thousand words</b></p>
+          <p>
+            Someone said that rightly, because images can convey complex ideas
+            and emotions more effectively than a large amount of descriptive
+            text. Essentially, it suggests that visual representations can be
+            more powerful and impactful in communication than merely words.
+            Keeping this thought in mind, we enabled the user to
+            <b>bookmark even images</b> so that they can come back to the image
+            that was most helpful to them.
+            <a
+              style="
+                text-decoration: underline;
+                color: #0d6efd;
+                cursor: pointer;
+              "
+              id="imageGalleryDiv"
+              >Take me to the image gallery
+            </a>
+            🪄
+          </p>
+        </div>
+
+        <!-- Google AI section -->
+        <div id="googleAI">
+          <div class="headingDiv">
+            <h3>
+              <span class="border-animation">Google AI's Magic</span>
+            </h3>
+            <img
+              id="ragLoader"
+              style="display: none"
+              src="resources/loader.svg"
+              width="40" />
+          </div>
+
+          <div
+            style="
+              width: 80%;
+              margin: auto;
+              margin-top: 1rem;
+              text-align: justify;
+            ">
+            <p>
+              Internet is a digital jungle, and its very easy to get lost in it.
+              To ease your way out, you can use this
+              <b>brower's built-in AI</b>, which allows you to ask any query,
+              and it will return you an answer. The model stays
+              <b>on your local machine</b>; thus increasing data-privacy &
+              reducing latency. Using <b>Gemini Nano</b> model to generate
+              responses for your query.
+            </p>
+
+            <p id="AISettingsPage">
+              You can upload a <b>pdf, doc, txt, or an image</b>, and can then
+              <b><u>summarize, translate, or ask any follow up query</u></b
+              >. Browser AI is there to help you out. In order to use the
+              AI-playground, make sure following flags are enabled. Once the
+              above flags are enabled, check out the model status by navigating
+              to the "Model Status" section on the
+              <a href="chrome://on-device-internals" target="_blank"
+                >chrome://on-device-internals</a
+              >
+              page. If enabled, AI-generated captions will be used for the
+              bookmarked images
+            </p>
+
+            <ol id="AISettingsPage">
+              <li>
+                Enable the
+                <a
+                  href="chrome://flags/#prompt-api-for-gemini-nano"
+                  target="_blank"
+                  >Gemini Nano</a
+                >
+                flag
+              </li>
+              <li>
+                Enable the
+                <a
+                  href="chrome://flags/#prompt-api-for-gemini-nano-multimodal-input"
+                  target="_blank"
+                  >multimodal Gemini Nano</a
+                >
+                flag
+              </li>
+            </ol>
+          </div>
+
+          <!-- AI Playground -->
+          <div id="ai-playground" class="playground-vault">
+            <img
+              id="reset-playground"
+              class="reset-icon"
+              src="resources/reset.png"
+              alt="reset"
+              style="display: none" />
+
+            <div id="upload-prompt" class="vault-center">
+              <img
+                width="70"
+                height="70"
+                src="resources/d-and-d.png"
+                alt="upload" />
+              <p>Click or drag to upload for AI analysis</p>
+              <input
+                type="file"
+                id="file-input"
+                accept="image/*,.pdf,.doc,.docx,.txt,.md,.js"
+                hidden />
+              <div
+                style="
+                  margin: 10px 0;
+                  font-weight: bold;
+                  font-size: 0.8rem;
+                  opacity: 0.6;
+                ">
+                OR
+              </div>
+              <button
+                id="btn-paste-context"
+                class="ai-btn-sm"
+                style="background: #6c757d">
+                📋 Paste Text Content
+              </button>
+            </div>
+
+            <div id="active-ai-view" class="vault-content">
+              <div class="file-header" style="display: none">
+                <span id="display-name">filename.txt</span>
+                <span id="display-type" class="badge">text/plain</span>
+              </div>
+
+              <div class="playground-tabs">
+                <button class="tab-btn active" data-action="ask">
+                  Ask Anything
+                </button>
+                <button class="tab-btn" data-action="specifics">
+                  Do Specifics
+                </button>
+              </div>
+
+              <div id="tab-ask" class="tab-content">
+                <div class="chat-input-wrapper">
+                  <input
+                    type="text"
+                    id="general-prompt"
+                    placeholder="Ask AI about a general query or upload a file" />
+                  <button id="btn-ask-general" class="ai-btn-sm">Send</button>
+                </div>
+              </div>
+
+              <div id="tab-specifics" class="tab-content" style="display: none">
+                <div id="summarizer-options" class="settings-group">
+                  <div class="option-row">
+                    <label>Type:</label>
+                    <select id="sum-type">
+                      <option value="key-points">Key Points</option>
+                      <option value="tldr">TL;DR</option>
+                      <option value="teaser">Teaser</option>
+                      <option value="headline">Headline</option>
+                    </select>
+                  </div>
+                  <div class="option-row">
+                    <label>Length:</label>
+                    <select id="sum-length">
+                      <option value="short">Short</option>
+                      <option value="medium" selected>Medium</option>
+                      <option value="long">Long</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="ai-button-grid">
+                  <button id="btn-summarize" class="ai-btn">
+                    ✨ Summarize
+                  </button>
+                  <button id="btn-translate" class="ai-btn">
+                    🌐 Translate
+                  </button>
+                </div>
+              </div>
+
+              <div class="output-settings">
+                <label>Show output in:</label>
+                <select id="output-lang">
+                  <option value="en" selected>English</option>
+                  <option value="fr">French</option>
+                  <option value="hi">Hindi</option>
+                </select>
+              </div>
+
+              <div id="ai-progress-container" style="display: none"></div>
+
+              <div id="ai-output" class="output-scroll">
+                <p class="placeholder-text">AI response will appear here</p>
+              </div>
+            </div>
+
+            <p id="aiFileErrorDiv"></p>
+          </div>
+
+          <p
+            style="
+              width: 80%;
+              margin: auto;
+              margin-top: 1rem;
+              text-align: justify;
+            ">
+            <span
+              class="bg-warning"
+              style="padding: 0.2rem; border-radius: 0.2rem"
+              >Make sure to turn on the above-mentioned flags, as then only you
+              will be able to use the entire AI features. For the first time
+              users, the Gemini Nano model will be downloaded locally, so that
+              your data remains private. First-time users may experience a delay
+              while the model is being downloaded.</span
+            >
+          </p>
+        </div>
+
+        <!-- Guide Container -->
+        <div class="headingDiv">
+          <h3>
+            <span class="border-animation">LoLé Features</span>
+          </h3>
+          <img
+            id="ragLoader"
+            style="display: none"
+            src="resources/loader.svg"
+            width="40" />
+        </div>
+        <div class="guide-container" style="margin-bottom: 2rem">
+          <div
+            class="guide-card"
+            style="
+              box-shadow: 0 8px 16px rgba(128, 0, 32, 0.5);
+              text-align: left;
+            ">
+            <div class="icon mb-2">
+              <img src="resources/1.png" />
+              <h2 style="cursor: pointer; text-decoration: underline">
+                Automatic Run
+              </h2>
+            </div>
+            <p style="margin-bottom: 0; text-align: left" class="mb-2">
+              <b>What's this?</b> Extension will automatically run on these
+              pages
+            </p>
+            <p style="margin-bottom: 0">
+              <b><u>LoLé Notes</u></b
+              ><br />Gives you a canvas to play with the saved notes
+            </p>
+            <p style="margin-bottom: 0">
+              <b><u>JSON Bin</u></b
+              ><br />Rectified the UI to show entire BIN information
+            </p>
+            <p style="margin-bottom: 0">
+              <b><u>Reddit</u></b
+              ><br />Automates the share feature for the achievement
+            </p>
+          </div>
+
+          <div
+            class="guide-card"
+            style="
+              box-shadow: 0 8px 16px rgba(75, 0, 130, 0.5);
+              text-align: left;
+            ">
+            <div class="icon mb-2">
+              <img src="resources/2.png" />
+              <h2 style="cursor: pointer; text-decoration: underline">
+                Manual Run
+              </h2>
+            </div>
+            <p style="margin-bottom: 0; text-align: left" class="mb-2">
+              <b>What's this?</b> Click extension icon or interact with Logi
+              Creative Console to trigger magic
+            </p>
+            <p style="margin-bottom: 0">
+              <b><u>Youtube</u>:</b> Game-changer! Try it as your own risk
+            </p>
+            <br />
+            <p style="margin-bottom: 0">
+              <b><u>Reddit</u></b
+              >: Auto-scroll the UI so you find the best post quickly
+            </p>
+            <br />
+            <p style="margin-bottom: 0">
+              <b><u>Edudel</u></b
+              >: Helps teachers with uploading marks
+            </p>
+            <br />
+            <p style="margin-bottom: 0">
+              <b><u>OTTPlay</u></b
+              >: Turns it into a control-rich video player
+            </p>
+            <br />
+            <p style="margin-bottom: 0">
+              <b><u>GPON Wifi</u></b
+              >: Let's you see the device name & the band to which it's
+              connected to your WiFi
+            </p>
+            <br />
+            <p style="margin-bottom: 0">
+              <b><u>Discord</u></b
+              >: See the date & time for Discord servers, & channels
+            </p>
+          </div>
+
+          <div
+            class="guide-card"
+            style="
+              box-shadow: 0 8px 16px rgba(70, 130, 180, 0.5);
+              text-align: left;
+            ">
+            <div class="icon mb-2">
+              <img src="resources/3.png" />
+              <h2 style="cursor: pointer; text-decoration: underline">
+                Logitech Fusion
+              </h2>
+            </div>
+            <p style="margin-bottom: 0; text-align: left" class="mb-2">
+              <b>What's this?</b> Use LoLé with the Logitech-powered devices to
+              see the full potential
+            </p>
+            <p style="margin-bottom: 0">
+              <b><u>Creative Console</u></b
+              ><br />Dialpad & keypad ensures that you have the extension at
+              your figertips. Scroll or press the keys to start the magic
+            </p>
+            <p style="margin-bottom: 0">
+              <b><u>MX Master 4</u></b
+              ><br />Toggle the actions key and feel the magic, along with the
+              haptic feedback
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Gallery -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <span
+          id="deleteImage"
+          title="Delete this image"
+          style="
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 10001;
+          ">
+          &#128465;
+        </span>
+        <img class="modal-content" id="img01" />
+      </div>
+      <div
+        id="imageGallery"
+        style="display: none; width: 80%; text-align: center; margin: auto">
+        <h4>Below are your precious images</h4>
+        <p
+          id="imageParaBack"
+          style="text-decoration: underline; color: #0d6efd; cursor: pointer">
+          Take me back to the other bookmarks
+        </p>
+
+        <div
+          id="imageCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="3000">
+          <div id="carouselCounter" class="carousel-counter">0 images</div>
+
+          <div class="carousel-inner" id="carouselInner"></div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#imageCarousel"
+            data-bs-slide="prev">
+            <span
+              class="carousel-control-prev-icon"
+              aria-hidden="true"
+              style="filter: invert(1)"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#imageCarousel"
+            data-bs-slide="next">
+            <span
+              class="carousel-control-next-icon"
+              aria-hidden="true"
+              style="filter: invert(1)"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="aboutOverlay" class="about-overlay" style="display: none">
+      <button class="close-btn" onclick="closeAbout()" title="Close">
+        &times;
+      </button>
+
+      <div class="about-card">
+        <div class="faq-panes-container">
+          <div class="faq-pane active">
+            <h2 class="faq-question">Why a Chrome Browser Extension?</h2>
+            <div class="faq-answer">
+              <p>
+                In an era where the browser has become the primary operating
+                environment for professional work, LoLé utilizes the Chrome
+                extension architecture to achieve true synergy between the web
+                and the user. Chrome is the most widely used browser globally,
+                providing a massive, reliable foundation for our tools.
+              </p>
+              <br />
+              <p>
+                More importantly, by utilizing Chrome’s extension framework, we
+                integrate the <b>Browser AI (Gemini Nano)</b> directly into the
+                user’s workflow. Because this AI runs entirely locally on the
+                user's machine, the privacy and security profiles are
+                unmatched—no data is sent to the cloud for processing.
+                Furthermore, Chrome extensions offer the most granular control
+                over browser events, allowing LoLé to manipulate the DOM, manage
+                tabs, and handle browser sessions with a level of precision that
+                a standalone application simply cannot replicate.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-pane">
+            <h2 class="faq-question">Components of the Project</h2>
+            <div class="faq-answer">
+              <p>
+                LoLé is not just a plugin; it is a full-stack orchestration
+                between hardware and software. It comprises three core pillars:
+              </p>
+              <ul>
+                <li>
+                  <b>The Logitech Creative Console Plugin (.lplug4):</b> This
+                  component acts as the hardware "brain." It bridges the gap
+                  between Logitech's high-precision inputs—such as dial
+                  rotations, creative console buttons, and MX Master keys—and
+                  the browser. It allows users to map physical actions to
+                  complex browser workflows.
+                </li>
+                <li>
+                  <b>The Chrome Extension:</b> This serves as the processing
+                  hub. It communicates with the Logitech plugin to execute
+                  instructions while leveraging OS-level APIs to perform "smart"
+                  tasks.
+                </li>
+                <li>
+                  <b>The OS-Level Integration:</b> This is where LoLé truly
+                  differentiates itself. Beyond the browser, the extension
+                  interacts with Windows OS APIs to:
+                  <ul style="margin-top: 5px; list-style-type: circle">
+                    <li>
+                      <i>Auto-install profiles:</i> Instantly configuring the
+                      Logitech plugin environment upon the extension's
+                      installation.
+                    </li>
+                    <li>
+                      <i>Desktop Management:</i> Interacting with desktop icons
+                      and system state.
+                    </li>
+                    <li>
+                      <i>System Optimization:</i> Performing deep-clean
+                      operations to clear clutter, directly translating hardware
+                      inputs into system-level performance gains.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-pane">
+            <h2 class="faq-question">Why Developer Mode?</h2>
+            <div class="faq-answer">
+              <p>
+                We believe in complete transparency. To make a Chrome extension
+                available via the official Web Store, it must undergo a rigorous
+                review process that typically takes a week or more. While that
+                is the ultimate goal for public distribution, we intentionally
+                utilize Developer Mode for this phase of the project.
+              </p>
+              <br />
+              <p>
+                This approach offers two distinct advantages for our judges and
+                early adopters:
+              </p>
+              <ul>
+                <li>
+                  <b>Direct Access:</b> It eliminates the "black-box" nature of
+                  Store-hosted apps, allowing you to inspect the raw code and
+                  see exactly how the hardware-software fusion is achieved.
+                </li>
+                <li>
+                  <b>Agility:</b> It allows us to push updates, patches, and
+                  feature enhancements instantly without being gated by approval
+                  queues, ensuring that you are always testing the most
+                  cutting-edge version of LoLé.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-pane">
+            <h2 class="faq-question">Universal vs. App Plugin?</h2>
+            <div class="faq-answer">
+              <p>
+                Most productivity tools suffer from "foreground dependency,"
+                where the application must be actively focused to receive input.
+                LoLé shatters this paradigm.
+              </p>
+              <br />
+              <p>
+                By using a universal browser-based architecture that acts as a
+                bridge to OS-level operations, LoLé remains
+                <b>profile-aware</b>. If you have multiple Chrome profiles for
+                work, personal use, or side projects, LoLé knows exactly which
+                one is which. You do not need to hunt for the right instance of
+                Chrome or bring it to the foreground; just tap a key on your
+                Logitech device, and the extension—running in the
+                background—processes the command in the correct context
+                immediately. This results in a seamless, high-speed browsing
+                experience where the hardware works for the browser, rather than
+                just pointing at it.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-pane">
+            <h2 class="faq-question">Why This Project is the Best</h2>
+            <div class="faq-answer">
+              <p>
+                LoLé is the ultimate productivity partner because it solves the
+                "Context Switch" problem that plagues modern computing. It is
+                the best because it bridges the three most critical components
+                of modern work: <b>Hardware, AI, and the OS</b>.
+              </p>
+              <ul>
+                <li>
+                  <b>The Hardware Edge:</b> It respects the tactile nature of
+                  high-end peripherals like the MX Master 4 and Creative
+                  Console, turning them into extensions of your creative mind.
+                </li>
+                <li>
+                  <b>The AI Edge:</b> By utilizing on-device Gemini Nano, we
+                  offer high-fidelity summarization, translation, and analysis
+                  without the privacy risks or latency associated with
+                  server-side AI.
+                </li>
+                <li>
+                  <b>The Efficiency Edge:</b> LoLé embodies the art of being
+                  smart and efficient. Whether it is deep-cleaning your system,
+                  organizing cluttered tabs with Focus Mode, or summarizing
+                  complex documents with a single dial-turn, LoLé is designed to
+                  do the heavy lifting so the user can focus on the "Art of
+                  Creation".
+                </li>
+              </ul>
+              <p style="margin-top: 15px; font-weight: bold; color: #0d6efd">
+                This is not just another browser utility; it is the evolution of
+                how we interact with our digital workspace.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-navigation">
+          <button id="prevFaqBtn" class="nav-arrow" onclick="prevFaq()">
+            &#8592;
+          </button>
+          <span id="faqCounter" class="faq-counter">1 / 5</span>
+          <button id="nextFaqBtn" class="nav-arrow" onclick="nextFaq()">
+            &#8594;
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Carousel State
+      let currentFaqIndex = 0;
+      let faqPanes = [];
+
+      function initAboutCarousel() {
+        faqPanes = document.querySelectorAll(".faq-pane");
+        updateFaqView();
+      }
+
+      function updateFaqView() {
+        // Hide all, show current
+        faqPanes.forEach((pane, index) => {
+          if (index === currentFaqIndex) {
+            pane.classList.add("active");
+          } else {
+            pane.classList.remove("active");
+          }
+        });
+
+        // Update Counter
+        document.getElementById("faqCounter").innerText =
+          `${currentFaqIndex + 1} / ${faqPanes.length}`;
+
+        // Update Button States (Disable prev on first, disable next on last)
+        document.getElementById("prevFaqBtn").disabled = currentFaqIndex === 0;
+        document.getElementById("nextFaqBtn").disabled =
+          currentFaqIndex === faqPanes.length - 1;
+      }
+
+      function nextFaq() {
+        if (currentFaqIndex < faqPanes.length - 1) {
+          currentFaqIndex++;
+          updateFaqView();
+        }
+      }
+
+      function prevFaq() {
+        if (currentFaqIndex > 0) {
+          currentFaqIndex--;
+          updateFaqView();
+        }
+      }
+
+      function openAbout() {
+        currentFaqIndex = 0; // Reset to first page every time it opens
+        document.getElementById("aboutOverlay").style.display = "flex";
+        initAboutCarousel();
+      }
+
+      function closeAbout() {
+        document.getElementById("aboutOverlay").style.display = "none";
+      }
+
+      // Ensure the icon triggers the new logic
+      document.getElementById("aboutIcon").onclick = openAbout;
+    </script>
+
+    <!--for handling the landing section stuff-->
+    <script>
+      const reasons = [
+        "Leveraging hardware buttons for instant browser actions creates a powerful, high-speed workflow.",
+        "Optimizing productivity by mapping specific extension features to the MX Master's dials and gestures.",
+        "Linking physical inputs to cloud-based tasks ensures your most used tools are never more than a click away.",
+        "Extending the reach of the Logitech ecosystem into the web browser for a truly unified user experience.",
+      ];
+
+      const fullForms = [
+        "Logitech-to-Web Liaison",
+        "Omnichannel Workflow Optimization",
+        "Local-to-Cloud Event Linkage",
+        "Ecosystem-Wide Extension Control",
+      ];
+
+      const fullFormDiv = document.querySelector("#full-form");
+      const reasoningDiv = document.querySelector("#reasoning");
+
+      function startAnimation() {
+        document.querySelectorAll("#letters img").forEach((letter, ind) => {
+          setTimeout(() => {
+            // Hide the text first (fade-out)
+            fullFormDiv.style.opacity = 0;
+            reasoningDiv.style.opacity = 0;
+
+            setTimeout(() => {
+              // Update the content
+              reasoningDiv.textContent = reasons[ind];
+              fullFormDiv.textContent = fullForms[ind];
+
+              // Fade the text back in (fade-in)
+              fullFormDiv.style.opacity = 1;
+              reasoningDiv.style.opacity = 1;
+
+              letter.style.filter = "grayscale(0)";
+            }, 500);
+
+            // Reset after all letters are traversed
+            if (ind === document.querySelectorAll("#letters img").length - 1) {
+              setTimeout(() => {
+                document.querySelectorAll("#letters img").forEach((letter) => {
+                  letter.style.filter = "grayscale(100%)";
+                });
+                startAnimation();
+              }, 4000);
+            }
+          }, ind * 3500);
+        });
+      }
+
+      // Start the animation cycle
+      startAnimation();
+
+      const gsapAnimations = [
+        // 0. Smile animation
+        {
+          duration: 2,
+          x: (i) => i * 30 - 60,
+          y: (i) => Math.sin(i * 0.7) * 50 - 20,
+          rotate: (i) => i * 10 - 20,
+          ease: "power1.inOut",
+          repeat: -1,
+          yoyo: true,
+          stagger: 0.2,
+        },
+        // 1. Vertical movement and rotation
+        {
+          duration: 1.5, // Duration of the animation for each letter
+          y: (i) => (i % 2 === 0 ? -20 : 20),
+          rotate: (i) => (i % 2 === 0 ? 10 : -10),
+          ease: "power2.inOut",
+          stagger: 0.2,
+          repeat: -1,
+          yoyo: true,
+        },
+        // 2. Zoom In and Rotate
+        {
+          duration: 1.5,
+          scale: 1.3,
+          rotate: 360,
+          ease: "power1.inOut",
+          stagger: 0.2,
+          repeat: -1,
+          yoyo: true,
+        },
+        // 3. Wave and Float Effect
+        {
+          duration: 2,
+          y: (i) => Math.sin(i * 1.5) * 30,
+          rotate: (i) => i * 15 - 30,
+          ease: "sine.inOut",
+          stagger: 0.25,
+          repeat: -1,
+          yoyo: true,
+        },
+        // 4. Flip and Slide Up
+        {
+          duration: 1.2,
+          y: -50,
+          rotateX: 180,
+          ease: "power2.out",
+          stagger: 0.3,
+          repeat: -1,
+          yoyo: true,
+        },
+      ];
+
+      const animationInd = Math.floor(Math.random() * gsapAnimations.length);
+
+      gsap.to("#letters img", gsapAnimations[animationInd]);
+    </script>
+
+    <!-- script for clicking the proceedToMain button -->
+    <script>
+      document
+        .querySelector("#proceedToMain")
+        .addEventListener("click", (el) => {
+          document.querySelector("#main-text").style.display = "block";
+          document.querySelector("#teamDetails").style.display = "none";
+          document.querySelector("#landing-section").style.display = "none";
+          el.target.style.display = "none";
+        });
+    </script>
+
+    <!-- AI Playground -->
+    <script>
+      // --- AI elements in the UI ---
+      const output = document.getElementById("ai-output");
+      const vault = document.getElementById("ai-playground");
+      const fileInput = document.getElementById("file-input");
+      const errorDiv = document.getElementById("aiFileErrorDiv");
+      const resetBtn = document.getElementById("reset-playground");
+      const activeView = document.getElementById("active-ai-view");
+      const uploadPrompt = document.getElementById("upload-prompt");
+      const outputLangSelect = document.getElementById("output-lang");
+      const generalPromptInput = document.getElementById("general-prompt");
+
+      // --- languages & other data ---
+      const ALLOWED_LANGUAGES = ["en", "fr", "hi"];
+      const langMap = { en: "English", fr: "French", hi: "Hindi" };
+      window.detectedLang = "";
+      window.currentFile = null;
+      let loadedText = "";
+
+      document.querySelectorAll(".tab-btn").forEach((tabBtn) => {
+        tabBtn.addEventListener("click", (e) => {
+          const tabName = e.target.getAttribute("data-action");
+          document
+            .querySelectorAll(".tab-content")
+            .forEach((t) => (t.style.display = "none"));
+          document
+            .querySelectorAll(".tab-btn")
+            .forEach((b) => b.classList.remove("active"));
+          document.getElementById(`tab-${tabName}`).style.display = "block";
+          if (e) e.currentTarget.classList.add("active");
+        });
+      });
+
+      function setBusy(isBusy) {
+        if (isBusy) {
+          vault.classList.add("playground-busy");
+          errorDiv.classList.remove("show");
+        } else {
+          vault.classList.remove("playground-busy");
+        }
+      }
+
+      function showError(msg) {
+        errorDiv.innerText = msg;
+        errorDiv.classList.add("show");
+        output.innerText = "Just encountered some roadblock. Try again";
+      }
+
+      // language detector function
+      async function detectAndValidate(text) {
+        try {
+          const detector = await LanguageDetector.create();
+          const results = await detector.detect(text);
+          const topResult = results[0];
+
+          if (
+            !topResult ||
+            !ALLOWED_LANGUAGES.includes(topResult.detectedLanguage)
+          ) {
+            const langCode = topResult
+              ? topResult.detectedLanguage.toUpperCase()
+              : "Unknown";
+            throw new Error(
+              `Unsupported language: ${langCode}. Only English, French, and Hindi are supported. Refresh the page`,
+            );
+          }
+
+          window.detectedLang = topResult.detectedLanguage;
+          document.getElementById("display-type").innerText =
+            langMap[window.detectedLang];
+          return true;
+        } catch (err) {
+          showError(err.message);
+          activeView.style.display = "none";
+          uploadPrompt.style.display = "block";
+          return false;
+        }
+      }
+
+      async function runAI(type, options = {}) {
+        const api = type === "Prompt" ? LanguageModel : self[type];
+        if (!api) throw new Error(`${type} API not found.`);
+
+        const availability = await api.availability(options);
+        if (availability === "no") throw new Error(`${type} is not supported.`);
+
+        // Correct multimodal schema
+        const creationOptions =
+          type === "Prompt"
+            ? {
+                expectedInputs: [
+                  { type: "text", languages: ["en"] },
+                  { type: "image" },
+                ],
+                expectedOutputs: [{ type: "text", languages: ["en"] }],
+              }
+            : options;
+
+        return await api.create({
+          ...creationOptions,
+          monitor(m) {
+            m.addEventListener("downloadprogress", (e) => {
+              const container = document.getElementById(
+                "ai-progress-container",
+              );
+              if (!container) return;
+
+              const p =
+                e.total > 0 ? Math.round((e.loaded / e.total) * 100) : 0;
+
+              // 1. Setup the Outer Track
+              container.style.display = "block";
+              container.style.position = "relative";
+              container.style.height = "1rem";
+              container.style.background = "#e9ecef";
+              container.style.borderRadius = "14px";
+              container.style.overflow = "hidden";
+              container.style.margin = "15px 0";
+
+              // 2. Overlay the Fill and Text
+              container.innerHTML = `
+                <div id="progress-fill" style="
+                  width: ${p}%; 
+                  height: 100%; 
+                  background-color: #28a745; 
+                  transition: width 0.3s ease;
+                "></div>
+                
+                <div style="
+                  position: absolute; 
+                  top: 0; 
+                  left: 0; 
+                  width: 100%; 
+                  height: 100%; 
+                  display: flex; 
+                  align-items: center; 
+                  justify-content: center; 
+                  font-size: 0.85rem; 
+                  font-weight: 800; 
+                  color: ${p > 55 ? "white" : "#333"}; 
+                  pointer-events: none;
+                ">
+                  (First time user) Downloading AI Model... ${p}%
+                </div>
+              `;
+
+              if (p >= 100) {
+                const label = container.querySelector("div:last-child");
+                if (label) label.innerText = "Model Ready!";
+                setTimeout(() => {
+                  container.style.display = "none";
+                }, 1500);
+              }
+            });
+          },
+        });
+      }
+
+      async function interactWithAI(userPrompt) {
+        setBusy(true);
+        try {
+          const session = await runAI("Prompt");
+          const contentParts = [
+            { type: "text", value: userPrompt || "Analyze this." },
+          ];
+
+          // 1. Check for IMAGE first
+          if (
+            window.currentFile &&
+            window.currentFile.type.startsWith("image/")
+          ) {
+            contentParts.push({ type: "image", value: window.currentFile });
+          }
+          // 2. Use text context if available (handles both File and Paste)
+          else if (loadedText) {
+            contentParts.push({
+              type: "text",
+              value: `\n\nContext: ${loadedText}`,
+            });
+          }
+
+          const response = await session.prompt([
+            { role: "user", content: contentParts },
+          ]);
+          await processAndDisplay(response);
+        } catch (err) {
+          showError(err.message);
+        } finally {
+          setBusy(false);
+        }
+      }
+
+      async function processAndDisplay(rawText, format = "markdown") {
+        const targetLang = outputLangSelect.value;
+        let finalContent = rawText;
+
+        // 1. Handle Translation
+        if (targetLang !== "en") {
+          try {
+            const translator = await runAI("Translator", {
+              sourceLanguage: "en",
+              targetLanguage: targetLang,
+            });
+            finalContent = await translator.translate(rawText);
+
+            /* Fix: Cleanup AI-added spaces around Markdown
+              Matches ** word ** and converts to **word**  */
+            finalContent = finalContent
+              .replace(/\*\*\s+(.*?)\s+\*\*/g, "**$1**") // Bold
+              .replace(/\*\s+(.*?)\s+\*/g, "*$1*") // Italics
+              .replace(/^#+\s+/gm, (match) => match.trim() + " "); // Headers
+          } catch (err) {
+            console.warn("Translation failed, using original.");
+          }
+        }
+
+        // 2. Render to UI
+        if (format === "markdown" && typeof marked !== "undefined") {
+          // Ensure the output container is treated as HTML
+          output.innerHTML = marked.parse(finalContent);
+        } else {
+          output.innerText = finalContent;
+        }
+      }
+
+      // --- File drop for AI analysis ---
+      async function handleFile(file) {
+        if (!file) return;
+        window.currentFile = file;
+        errorDiv.classList.remove("show");
+
+        // Show file-specific UI elements
+        document.querySelector(".file-header").style.display = "flex";
+        // document.getElementById("tab-specifics").style.display = "block";
+        uploadPrompt.style.display = "none";
+        resetBtn.style.display = "block";
+
+        output.innerText = "File uploaded. Now let's use the AI features";
+
+        if (file.type.startsWith("image/")) {
+          document.getElementById("display-name").innerText = file.name;
+          document.getElementById("display-type").innerText = "IMAGE";
+          window.detectedLang = "en";
+        } else {
+          const reader = new FileReader();
+          reader.onload = async (e) => {
+            const text = e.target.result;
+            setBusy(true);
+            const isValid = await detectAndValidate(text);
+            setBusy(false);
+            if (isValid) {
+              loadedText = text;
+              document.getElementById("display-name").innerText = file.name;
+            }
+          };
+          reader.readAsText(file);
+        }
+      }
+
+      uploadPrompt.onclick = () => fileInput.click();
+      fileInput.onchange = (e) => handleFile(e.target.files[0]);
+
+      vault.ondragover = (e) => {
+        e.preventDefault();
+        vault.style.background = "#eee";
+      };
+      vault.ondragleave = () => (vault.style.background = "#f9f9f9");
+      vault.ondrop = (e) => {
+        e.preventDefault();
+        handleFile(e.dataTransfer.files[0]);
+      };
+
+      resetBtn.onclick = () => {
+        // Return to "General Chat" mode
+        document.querySelector(".file-header").style.display = "none";
+        document.getElementById("tab-specifics").style.display = "none";
+
+        // Switch back to 'Ask' tab if user was in 'Specifics'
+        document
+          .querySelectorAll(".tab-content")
+          .forEach((t) => (t.style.display = "none"));
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((b) => b.classList.remove("active"));
+        document.getElementById("tab-ask").style.display = "block";
+        document.querySelector('[data-action="ask"]').classList.add("active");
+
+        resetBtn.style.display = "none";
+        uploadPrompt.style.display = "block";
+        errorDiv.classList.remove("show");
+        output.innerHTML =
+          '<p class="placeholder-text">AI response will appear here</p>';
+        fileInput.value = "";
+        window.currentFile = null;
+        loadedText = "";
+      };
+
+      // Prompt AI button
+      document.getElementById("btn-ask-general").onclick = () => {
+        const query = generalPromptInput.value;
+        if (!query) return showError("Please type a question first.");
+        interactWithAI(query);
+      };
+
+      // Summarize button
+      document.getElementById("btn-summarize").onclick = async () => {
+        if (!window.currentFile && !loadedText) {
+          return showError(
+            "A file or last-copied text must be uploaded to perform summarization.",
+          );
+        }
+
+        // 1. Fetch the user's selected options at the very beginning
+        const sumType = document.getElementById("sum-type").value;
+        const sumLength = document.getElementById("sum-length").value;
+
+        if (
+          window.currentFile &&
+          window.currentFile.type.startsWith("image/")
+        ) {
+          // 2. Update the UI to show that chosen options are being applied
+          output.innerText = "Describing this image and summarizing any text";
+
+          // 3. Incorporate the options into the multimodal prompt
+          const imagePrompt = `Describe this image and summarize any text or context found within. 
+                        Provide the summary as a ${sumType} and ensure the length is ${sumLength}.`;
+
+          await interactWithAI(imagePrompt);
+          return;
+        }
+
+        setBusy(true);
+        try {
+          output.innerText = "Summarizing the uploaded file...";
+
+          // Reuse the pre-fetched values for the text Summarizer API
+          const options = {
+            type: sumType,
+            length: sumLength,
+            format: "markdown",
+          };
+
+          const model = await runAI("Summarizer", options);
+          const MAX_CHUNK_SIZE = 15000;
+          let finalSummary = "";
+
+          if (loadedText.length > MAX_CHUNK_SIZE) {
+            const chunks = [];
+            for (let i = 0; i < loadedText.length; i += MAX_CHUNK_SIZE) {
+              chunks.push(loadedText.substring(i, i + MAX_CHUNK_SIZE));
+            }
+            const chunkSummaries = await Promise.all(
+              chunks.map(async (chunk, index) => {
+                output.innerText = `Summarizing part ${index + 1}/${chunks.length}...`;
+                return await model.summarize(chunk);
+              }),
+            );
+            finalSummary = await model.summarize(chunkSummaries.join("\n\n"));
+          } else {
+            finalSummary = await model.summarize(loadedText);
+          }
+          await processAndDisplay(finalSummary, "markdown");
+        } catch (err) {
+          showError(err.message);
+        } finally {
+          setBusy(false);
+        }
+      };
+
+      // Translate button
+      document.getElementById("btn-translate").onclick = async () => {
+        if (!window.currentFile && !loadedText) {
+          return showError(
+            "A file or last-copied text must be uploaded to perform translation.",
+          );
+        }
+
+        const targetLang = outputLangSelect.value;
+
+        if (
+          window.currentFile &&
+          window.currentFile.type.startsWith("image/")
+        ) {
+          output.innerText = `Extracting & translating any text in this image into ${langMap[targetLang]}`;
+          await interactWithAI(
+            `Extract and translate all text found in this image into ${langMap[targetLang]}.`,
+          );
+          return;
+        }
+
+        if (targetLang === window.detectedLang) {
+          showError(
+            `Uploaded content is already in ${langMap[window.detectedLang]}.`,
+          );
+          return;
+        }
+
+        setBusy(true);
+        try {
+          output.innerText = "Checking language packs & then translating...";
+          const translator = await runAI("Translator", {
+            sourceLanguage: window.detectedLang,
+            targetLanguage: targetLang,
+          });
+          output.innerText = await translator.translate(loadedText);
+        } catch (err) {
+          showError(err.message);
+        } finally {
+          setBusy(false);
+        }
+      };
+
+      // for pasting out text
+      document.getElementById("btn-paste-context").onclick = async (e) => {
+        e.stopPropagation();
+        try {
+          const text = await navigator.clipboard.readText();
+          if (!text || text.trim().length === 0) {
+            return showError("Clipboard is empty.");
+          }
+
+          // Assign to the global variable used by AI functions
+          loadedText = text;
+          window.currentFile = null;
+
+          // UI Updates
+          document.querySelector(".file-header").style.display = "flex";
+
+          uploadPrompt.style.display = "none";
+          resetBtn.style.display = "block";
+          document.getElementById("display-name").innerText = "Pasted Context";
+          document.getElementById("display-type").innerText = "TEXT/PLAIN";
+
+          // CRITICAL: Detect language so Translator/Summarizer works
+          setBusy(true);
+          const isValid = await detectAndValidate(text);
+          setBusy(false);
+
+          if (isValid) {
+            output.innerHTML =
+              '<p class="placeholder-text">Content ready! Switch to "Do Specifics" to summarize/translate or use Prompt API to ask any question</p>';
+          }
+        } catch (err) {
+          if (err.name === "NotAllowedError") {
+            showError(
+              "Clipboard access was denied. Please allow it in your site settings.",
+            );
+          } else {
+            showError(
+              "An unexpected error occurred while pasting. Upload a file to continue",
+            );
+            console.error(err);
+          }
+        }
+      };
+
+      // Seals the AI Playground for unsupported Chrome versions (earlier than v138)
+      function sealPlayground() {
+        document.querySelector("#googleAI").classList.add("playground-sealed");
+
+        const overlay = document.createElement("div");
+        overlay.className = "sealed-overlay";
+
+        overlay.innerHTML = `
+            <div class="caution-tape">
+              &nbsp;&nbsp; AI Access Restricted! &nbsp;&nbsp; CHROME v138+ REQUIRED &nbsp;&nbsp; SYSTEM INCOMPATIBLE &nbsp;&nbsp;
+            </div>
+          `;
+
+        document.querySelector("#googleAI").appendChild(overlay);
+
+        // 3. Clear existing errors to keep the scene clean
+        errorDiv.classList.remove("show");
+        output.innerText = "Access Denied: Browser version too low.";
+      }
+
+      async function getChromeVersion() {
+        if (navigator.userAgentData) {
+          const data = await navigator.userAgentData.getHighEntropyValues([
+            "fullVersionList",
+          ]);
+          const chromeBrand = data.fullVersionList.find(
+            (b) => b.brand === "Google Chrome" || b.brand === "Chromium",
+          );
+          return chromeBrand ? chromeBrand.version : "Unknown";
+        }
+        return "Not supported";
+      }
+
+      (async () => {
+        const chromeVersion = await getChromeVersion();
+        if (
+          typeof Number(chromeVersion.split(".")[0]) == "number" &&
+          Number(chromeVersion.split(".")[0]) < 138
+        )
+          sealPlayground();
+      })();
+    </script>
+  </body>
+</html>
