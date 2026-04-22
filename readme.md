@@ -108,7 +108,7 @@ We had a lot of other orientations in our mind, but as it was our first-time usi
 
 <h3>5) Gmail Profiles</h3>
 <p align="justify">If you are a Windows user, and have Chrome installed on your machine, you might be aware of the fact that if we have multiple emails logged in a single Chrome profile, then accessing those emails is very cumbersome. We have to open the gmail inbox of an email by navigating to mail.google.com/mail/u/0 and from there on, we have to use the dropdown filter, to navigate to other emails. Even to access things like Google account, drive or any other section for the particular gmail account, we have to first dig that hole, which is quite repetitive and boring. </p>
-<img src="raedme_img/gmail-profiles.png">
+<img src="readme_img/gmail-profiles.png">
 
 <br>
 
