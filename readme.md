@@ -36,3 +36,10 @@ Both, the plugin & extension, will show warning to the users that you are missin
 
 <img src="readme_img/plugin_error.jpg">
 <img src="readme_img/extension_error.jpg">
+
+<br>
+
+## C# Breakdown
+<p align="justify">
+1. <a href="Lole%20plugin/src/Actions/CounterCommand.cs">CounterCommand.cs</a>
+</p>
