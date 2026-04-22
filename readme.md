@@ -41,5 +41,15 @@ Both, the plugin & extension, will show warning to the users that you are missin
 
 ## C# Breakdown
 <p align="justify">
-1. <a href="Lole%20plugin/src/Actions/CounterCommand.cs">CounterCommand.cs</a>
+1. <a href="Lole%20plugin/src/Actions/CounterCommand.cs">CounterCommand.cs</a>: It features the LoLeBaseCommand abstract class, which implements a "Focus-First" logic. Before any web action runs, it checks if Chrome is active; if not, it automatically launches the correct Chrome profile before sending the command. Contains <b>24 custom actions</b> like DeepCleanCommand, RenameLogiCommand, and ToggleDesktopCommand <br><br>
+2. <a href="Lole%20plugin/src/Actions/CounterAdjustment.cs">CounterAdjustment.cs</a>: Tailored for efficient context switching. We implemented logic to handle "Tab Swiping" and volume adjustments using asynchronous calls to ensure the hardware dial remains responsive without UI lag. Contains only a single action titled "Switch Chrome Tabs" <br><br>
+3. <a href="Lole%20plugin/src/DesktopIconManagerAPI.cs">DesktopIconManagerAPI.cs</a>: It targets the `SHELLDLL_DefView` and `WorkerW layers` to find the hidden desktop list handle. This allows the "Icon Island" feature—automatically arranging or restoring your desktop icon layout with a single hardware tap. <br><br>
+4. <a href="Lole%20plugin/src/LolePlugin.cs">LolePlugin.cs</a>: We built a dynamic asset delivery system here. Upon loading, it checks for the existence of .lp5 keypad/dialpad profiles and downloads them from our server only if missing. It also manages the persistent "TargetChromeProfile" setting <br><br>
+5. <a href="Lole%20plugin/src/NotificationHelper.cs">NotificationHelper.cs</a>: We developed a specialized PowerShell-based XML injector. It can generate standard 2-line alerts or modern, interactive notifications featuring an "Open Location" button that uses protocol activation (file:///) to launch Windows Explorer directly to a specific folder. <br><br>
+6. <a href="Lole%20plugin/src/WebService.cs">WebService.cs</a>: This is the most critical file. It facilitates bidirectional, real-time communication between the hardware plugin and your Chrome extension. It includes specialized sub-APIs:
+  <ul>
+    <li>SystemCleanerAPI: Executes deep-clean logic to free up disk space</li>
+    <li>ChromeAccountAPI: Reads Chrome Preferences files to identify synced Google profiles</li>
+    <li>ChromeWindowManagerAPI: Uses WMI filters to find and focus specific Chrome profile instances natively</li>
+  </ul>
 </p>
