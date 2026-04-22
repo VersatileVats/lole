@@ -16,11 +16,11 @@ it eliminates context switching and allows you to execute complex OS-level tasks
 
 ## Installation Guide
 <p align="justify">
-I have uploaded the required files on my server. Just click on the following links to dowload the files & use the project on your local machine: 
+We have uploaded the required files on my server. Just click on the following links to dowload the files & use the project on your local machine: 
 <a href="https://hackathonmaverick.in/Lole.lplug4">Plugin installation file (.lplug4)</a>   &     <a href="https://hackathonmaverick.in/lole-extension.zip">Extension zipped file</a>
 
 The lplug4 file is ready to be used, as it will install the plugin on your options+ app, but as of now the Chrome extension is <b>not published</b> on the Chrome Web Store, as it takes around
-1-week for approval. I have sent the extension for approval to the Google team, and the extension will be available to the users by the next week. Till then, you have to follow the below steps
+1-week for approval. We have sent the extension for approval to the Google team, and the extension will be available to the users by the next week. Till then, you have to follow the below steps
 to successfully load the extension in your Chrome browser:
 
 <ol>
@@ -113,8 +113,10 @@ We had a lot of other orientations in our mind, but as it was our first-time usi
 <br>
 
 ## Final breakdown of the plugin
-<img src="readme_img/config-ui.jpg">
+<img src="readme_img/config-ui.jpg" height="450px">
 <br>
-<p align="justify">For more information, you can also see the <b>about section</b> of the website: https://versatilevats.com/lole</p>
+<p align="justify">Our plugin has only one adjustment named <b>Switch Chrome Tab</b> which enables the dial to switch traverse browser tabs. It works bi-directional. Regarding the action-commands for our plugin, we have 24 of them, which are categorized in 3 sections: <b>Browser, extension-based, & Windows OS</b> actions. You can run the browser commands on any of the browser, but the extension-based commands will only run if you have installed the extension on a browser.  
+  
+For more information, you can also see the <b>about section</b> of the website: https://versatilevats.com/lole</p>
 <br>
 <img src="readme_img/about-section.jpg">
