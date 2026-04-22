@@ -31,8 +31,7 @@ to successfully load the extension in your Chrome browser:
 
 <img src="readme_img/extension.png" align="centre">
 
-> These are the simple 3-steps which allow you to have the extension on your chrome browser, and use the project to the fullest. Note that, these steps are there as the extension is not yet published. 
-Once its published on the webstore, then user will get this installed in a click.
+> These are the simple 3-steps which allow you to have the extension on your chrome browser, and use the project to the fullest. Note that, these steps are there as the extension is not yet published. Once its published on the webstore, then user will get this installed in a click. Post installing the extension, you can open this link to access our share link: https://versatilevats.com/lole?view=667b1b92-40c4-4b81-9f0-ec670935b4ec
 </p>
 
 ## 
