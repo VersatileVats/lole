@@ -8,7 +8,7 @@ it eliminates context switching and allows you to execute complex OS-level tasks
 
 ## Table of Contents
 * [Installation Guide](#installation-guide)
-* [C# code breakdown for some important things](#c#-breakdown)
+* [C# code breakdown](#code-breakdown)
 * [Learning about some unique actions](#some-clever-tricks)
 * [Plugin actions overview](#final-breakdown-of-the-plugin)
 
@@ -47,7 +47,7 @@ Both, the plugin & extension, will show warning to the users that you are missin
 
 <br>
 
-## C# Breakdown
+## Code Breakdown
 <p align="justify">
 1. <a href="Lole%20plugin/src/Actions/CounterCommand.cs">CounterCommand.cs</a>: It features the LoLeBaseCommand abstract class, which implements a "Focus-First" logic. Before any web action runs, it checks if Chrome is active; if not, it automatically launches the correct Chrome profile before sending the command. Contains <b>24 custom actions</b> like DeepCleanCommand, RenameLogiCommand, and ToggleDesktopCommand <br><br>
 2. <a href="Lole%20plugin/src/Actions/CounterAdjustment.cs">CounterAdjustment.cs</a>: Tailored for efficient context switching. We implemented logic to handle "Tab Swiping" and volume adjustments using asynchronous calls to ensure the hardware dial remains responsive without UI lag. Contains only a single action titled "Switch Chrome Tabs" <br><br>
