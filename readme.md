@@ -2,6 +2,10 @@
 <p align="justify">
 LoLé is a powerful productivity bridge that seamlessly connects your physical Logitech hardware (Creative Console) directly to your digital browser workflows. By functioning as a universal, profile-aware Chrome extension, 
 it eliminates context switching and allows you to execute complex OS-level tasks and browser automations with a single physical input.
+
+Plugin is made for <b>Windows</b>
+<br>Works for <b>dialpad & keypad (creative console)</b>
+<br>Due to icon size issues, the actions do not look good inside the action ring bubble, so we did not mentioned rings in the demo. It's just the icons issue, otherwise the actions are working as intended for the action ring too 
 </p>
 
 <br>
