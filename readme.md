@@ -114,3 +114,7 @@ We had a lot of other orientations in our mind, but as it was our first-time usi
 
 ## Final breakdown of the plugin
 <img src="readme_img/config-ui.jpg">
+<br>
+<p align="justify">For more information, you can also see the <b>about section</b> of the website: https://versatilevats.com/lole</p>
+<br>
+<img src="readme_img/about-section.jpg">
