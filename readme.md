@@ -1,10 +1,7 @@
 ## Project Name: LoLé (Logiciel offering 4 logitech écosystème)
 <p align="justify">
 LoLé is a powerful productivity bridge that seamlessly connects your physical Logitech hardware (Creative Console) directly to your digital browser workflows. By functioning as a universal, profile-aware Chrome extension, 
-it eliminates context switching and allows you to execute complex OS-level tasks and browser automations with a single physical input. 
-  
-Powered by on-device Gemini Nano AI, LoLé ensures 100% data privacy while offering an 
-integrated research suite complete with real-time summarization, translation, and a secure local File Vault. Ultimately, it transforms static web browsing into an active, hardware-accelerated workspace designed to keep creators in their flow state.
+it eliminates context switching and allows you to execute complex OS-level tasks and browser automations with a single physical input.
 </p>
 
 <br>
